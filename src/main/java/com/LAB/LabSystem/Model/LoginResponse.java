@@ -6,6 +6,7 @@ public class LoginResponse {
 
     public LoginResponse(UserLoginDTO userLoginDTO) {
         if (userLoginDTO!= null && isValidEmail(userLoginDTO.getEmail())) {
+            System.out.print("Hello" +userLoginDTO);
             this.message = userLoginDTO.getEmail();
             this.status = true;
         } else {
@@ -47,3 +48,43 @@ public class LoginResponse {
 
 
 }
+
+//package com.LAB.LabSystem.Model;
+//
+//public class LoginResponse {
+//    private String message;
+//    private boolean status;
+//
+//    public LoginResponse(String message, boolean status) {
+//        this.message = message;
+//        this.status = status;
+//    }
+//    public LoginResponse(UserLoginDTO userLoginDTO) {
+//        if (userLoginDTO!= null && isValidEmail(userLoginDTO.getEmail())) {
+//            this.message = userLoginDTO.getEmail();
+//            this.status = true;
+//        } else {
+//            // Handle invalid userLoginDTO or email
+//            this.message = "Invalid email";
+//            this.status = false;
+//        }
+//
+//    }
+//
+//    // Getters and Setters
+//    public String getMessage() {
+//        return message;
+//    }
+//
+//    public void setMessage(String message) {
+//        this.message = message;
+//    }
+//
+//    public boolean getStatus() {
+//        return status;
+//    }
+//
+//    public void setStatus(boolean status) {
+//        this.status = status;
+//    }
+//}
