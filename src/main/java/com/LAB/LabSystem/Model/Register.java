@@ -14,6 +14,8 @@ public class Register {
     private String _id;
     @NotEmpty(message = "Username must not be empty")
     private String UserName;
+    @NotEmpty(message = "UserType must not be empty")
+    private String UserType;
     @NotEmpty(message = "Email must not be empty")
     private String Email;
     @NotEmpty(message = "Password must not be empty")
@@ -21,13 +23,15 @@ public class Register {
     @NotEmpty(message = "Mobile must not be empty")
     private String Mobile;
 
-    public Register(String _id, String userName, String email, String password, String mobile) {
+    public Register(String _id, String userName, String userType, String email, String password, String mobile) {
         this._id = _id;
         this.UserName = userName;
+        this.UserType = userType;
         this.Email = email;
-        this.Password = password;
+        this. Password = password;
         this.Mobile = mobile;
     }
+
 
     public Register() {
     }
@@ -35,12 +39,12 @@ public class Register {
     public Register(String email, String encode) {
     }
 
-
     @Override
     public String toString() {
         return "Register{" +
                 "_id='" + _id + '\'' +
                 ", UserName='" + UserName + '\'' +
+                ", UserType='" + UserType + '\'' +
                 ", Email='" + Email + '\'' +
                 ", Password='" + Password + '\'' +
                 ", Mobile='" + Mobile + '\'' +

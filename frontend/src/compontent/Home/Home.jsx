@@ -22,7 +22,7 @@ const Home = () => {
       </div>
       <div className="text-content">
         <h1>Best Healthcare Solution <br/> In Your City </h1>
-        <h3>Offers precise and reliable medical laboratory services, ensuring your health needs are met with professionalism and care. <br/>Trust us as your dedicated partner in healthcare for accurate diagnostics and compassionate service.</h3>
+        <h3>Offers precise and reliable medical laboratory services, <br/>ensuring your health needs are met with professionalism and care. </h3>
         <div className="button-container">
           <Link to="/Login" className="button-primary">Login</Link>
           <Link to="/register" className="button-secondary">Sign Up</Link>

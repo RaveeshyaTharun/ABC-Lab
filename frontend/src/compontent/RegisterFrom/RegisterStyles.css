@@ -11,6 +11,7 @@ body {
     align-items: center;
     block-size: 105vh;
     flex-direction:row;
+    background-color: #4bb0f8;
 }
 
 .register-form {
@@ -50,7 +51,7 @@ body {
     inline-size: 100%;
     padding: 12px 24px;
     background-color: hsl(221, 50%, 55%);
-    color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
     border: none;
     border-radius: 6px;
     font-weight: bold;

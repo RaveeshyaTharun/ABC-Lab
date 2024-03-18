@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #151516;
+    background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     font-weight: bold; /* Changed from font-style to font-weight */
 }

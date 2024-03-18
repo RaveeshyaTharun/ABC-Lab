@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2313d9;
+    background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     font-weight: bold;
     /* Changed from font-style to font-weight */
@@ -148,4 +148,22 @@
     font-size: 18px;
     font-weight: bolder;
     /* Set font size of the button text */
+}
+
+.button-primary{
+    background-color:#1485d4;
+    border-radius: 16px;
+    padding: 16px 40px;
+    color :#ffffff;
+    
+
+}
+
+.button-secondary{
+    border: 3px solid #1485d4;
+    border-radius: 16px;
+    padding: 16px 40px;
+    color :#1485d4;
+    
+
 }

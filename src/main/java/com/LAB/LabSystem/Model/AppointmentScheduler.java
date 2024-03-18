@@ -31,7 +31,9 @@ public class AppointmentScheduler {
     private String CheckingType;
 
     // Private constructor to prevent instantiation from outside
-    private AppointmentScheduler(String userID, String clientName, String clientEmail, String clientPhone,String date, String dateTime, String checkingType) {
+    private AppointmentScheduler(String userID, String clientName, String clientEmail,
+                                 String clientPhone,String date, String dateTime, String checkingType)
+    {
         this.UserID = userID;
         this.ClientName = clientName;
         this.ClientEmail = clientEmail;
