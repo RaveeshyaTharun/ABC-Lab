@@ -78,7 +78,7 @@ const AppointmentForm = () => {
     <div>
       <Container fluid className="Appointment-container">
         <Row className="justify-content-center">
-          <Col md={6}>
+          <Col md={8}>
             <div className="appointment-form">
               <h2>Appointment</h2>
               <Form onSubmit={handleSubmit}>

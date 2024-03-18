@@ -10,6 +10,7 @@ body {
     align-items: center;
     block-size: 100vh;
     padding: 10px;
+    background-color: #4bb0f8;
 }
 
 /* Adjustments for desktop responsiveness */
@@ -22,6 +23,7 @@ body {
     background-color: #f4f4f4;
     border-radius: 9px;
     padding: 30px 50px;
+    width: 200px;
     /* Adjust padding to expand left and right */
     inline-size: calc(350% - 200px);
     /* Adjust inline-size to expand left and right */

@@ -150,3 +150,21 @@
     font-weight: bolder;
     /* Set font size of the button text */
 }
+
+.button-primary{
+    background-color:#1485d4;
+    border-radius: 16px;
+    padding: 16px 40px;
+    color :#ffffff;
+    
+
+}
+
+.button-secondary{
+    border: 3px solid #1485d4;
+    border-radius: 16px;
+    padding: 16px 40px;
+    color :#1485d4;
+    
+
+}
