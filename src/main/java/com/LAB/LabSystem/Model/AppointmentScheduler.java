@@ -7,21 +7,21 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-
 @Setter
 @Getter
 @Data
 @Document(collection="Appointments")
 public class AppointmentScheduler {
 
+    private static AppointmentScheduler instance;
 
     @Id
     private String UserID;
-    @NotEmpty(message = "Name  must not be Empty")
+    @NotEmpty(message = "Name must not be Empty")
     private String ClientName;
     @NotEmpty(message = "Email must not be empty")
     private String ClientEmail;
-    @NotEmpty(message = "{Phone must not be empty")
+    @NotEmpty(message = "Phone must not be empty")
     private String ClientPhone;
     @NotEmpty(message = "Date must not be empty")
     private String AppDate;
@@ -30,7 +30,8 @@ public class AppointmentScheduler {
     @NotEmpty(message = "CheckingType must not be empty")
     private String CheckingType;
 
-    public AppointmentScheduler(String userID, String clientName, String clientEmail, String clientPhone,String date, String dateTime, String checkingType) {
+    // Private constructor to prevent instantiation from outside
+    private AppointmentScheduler(String userID, String clientName, String clientEmail, String clientPhone,String date, String dateTime, String checkingType) {
         this.UserID = userID;
         this.ClientName = clientName;
         this.ClientEmail = clientEmail;
@@ -40,7 +41,16 @@ public class AppointmentScheduler {
         this.CheckingType = checkingType;
     }
 
-    public AppointmentScheduler() {
+    // Static method to get the singleton instance
+    public static synchronized AppointmentScheduler getInstance() {
+        if (instance == null) {
+            instance = new AppointmentScheduler();
+        }
+        return instance;
+    }
+
+    // Ensure no instance can be created from outside
+    private AppointmentScheduler() {
     }
 
     @Override
@@ -55,9 +65,4 @@ public class AppointmentScheduler {
                 ", CheckingType='" + CheckingType + '\'' +
                 '}';
     }
-
-
-//    public String LocalDateTime() {
-//        return String.valueOf(dateTime);
-//    }
 }
